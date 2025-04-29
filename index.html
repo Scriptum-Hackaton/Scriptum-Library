@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scriptum - Biblioteca Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles-container" id="particles-js"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo Scriptum" class="logo">
+            <h1>Scriptum</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#books">Livros</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <a href="#"><i class="fas fa-user-circle"></i></a>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- Página Inicial com Círculo de Livros -->
+        <section class="home-section active" id="home">
+            <div class="welcome-text">
+                <h2 class="animated-title">Bem-vindo à <span>Scriptum</span></h2>
+                <p class="subtitle">Descubra novos mundos através das páginas</p>
+            </div>
+            
+            <div class="book-circle-container">
+                <div class="orbit-line"></div>
+                <div class="book-circle">
+                    <div class="center-item">
+                        <img src="assets/dado.png" alt="Dado" class="dice">
+                    </div>
+                    <div class="book-item" style="--i:1">
+                        <div class="book-cover">
+                            <img src="assets/jogosVorazes.png" alt="Jogos Vorazes">
+                            <div class="book-label">AÇÃO</div>
+                            <div class="book-hover-info">
+                                <h4>Jogos Vorazes</h4>
+                                <p>Suzanne Collins</p>
+                                <button class="btn-small">Ver mais</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-item" style="--i:2">
+                        <div class="book-cover">
+                            <img src="assets/percyJackson.png" alt="Fantasia">
+                            <div class="book-label">FANTASIA</div>
+                            <div class="book-hover-info">
+                                <h4>O Hobbit</h4>
+                                <p>J.R.R. Tolkien</p>
+                                <button class="btn-small">Ver mais</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-item" style="--i:3">
+                        <div class="book-cover">
+                            <img src="assets/morteNoNilo.png" alt="Morte no Nilo">
+                            <div class="book-label">INVESTIGAÇÃO</div>
+                            <div class="book-hover-info">
+                                <h4>Morte no Nilo</h4>
+                                <p>Agatha Christie</p>
+                                <button class="btn-small">Ver mais</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-item" style="--i:4">
+                        <div class="book-cover">
+                            <img src="assets/ÉAssimQueAcaba.png" alt="Assim que Acaba">
+                            <div class="book-label">ROMANCE</div>
+                            <div class="book-hover-info">
+                                <h4>Assim que Acaba</h4>
+                                <p>Colleen Hoover</p>
+                                <button class="btn-small">Ver mais</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-item" style="--i:5">
+                        <div class="book-cover">
+                            <img src="assets/LoveCraft.png" alt="Terror">
+                            <div class="book-label">TERROR</div>
+                            <div class="book-hover-info">
+                                <h4>It: A Coisa</h4>
+                                <p>Stephen King</p>
+                                <button class="btn-small">Ver mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-circle-info">
+                    <p>Clique no dado para descobrir novos livros aleatoriamente</p>
+                </div>
+            </div>
+            
+            <div class="featured-categories">
+                <h3>Categorias em Destaque</h3>
+                <div class="category-cards">
+                    <div class="category-card">
+                        <div class="category-icon"><i class="fas fa-dragon"></i></div>
+                        <h4>Fantasia</h4>
+                        <p>Mundos mágicos e criaturas fantásticas</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon"><i class="fas fa-heart"></i></div>
+                        <h4>Romance</h4>
+                        <p>Histórias de amor que tocam o coração</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon"><i class="fas fa-ghost"></i></div>
+                        <h4>Terror</h4>
+                        <p>Narrativas assustadoras para noites sem sono</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon"><i class="fas fa-microscope"></i></div>
+                        <h4>Ficção Científica</h4>
+                        <p>O futuro e a tecnologia em histórias fascinantes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Livros -->
+        <section class="books-section" id="books">
+            <div class="section-header">
+                <h2>Nossa Coleção</h2>
+                <p>Explore nossa vasta biblioteca de títulos</p>
+            </div>
+            
+            <div class="filter-tabs">
+                <button class="filter-btn active">Populares</button>
+                <button class="filter-btn">Novos</button>
+                <button class="filter-btn">Mais antigos</button>
+                <div class="dropdown">
+                    <button class="filter-btn dropdown-btn">Categorias <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Ação</a>
+                        <a href="#">Aventura</a>
+                        <a href="#">Fantasia</a>
+                        <a href="#">Romance</a>
+                        <a href="#">Terror</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Livros recomendados</h3>
+            
+            <div class="book-carousel">
+                <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="book-slider">
+                    <div class="book-card">
+                        <div class="book-card-inner">
+                            <div class="book-card-front">
+                                <img src="images/morte-no-nilo.jpg" alt="Morte no Nilo">
+                            </div>
+                            <div class="book-card-back">
+                                <h4>Morte no Nilo</h4>
+                                <p class="author">Agatha Christie</p>
+                                <p class="description">Um mistério clássico de Agatha Christie, ambientado em um cruzeiro pelo rio Nilo.</p>
+                                <button class="btn-small">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-card-inner">
+                            <div class="book-card-front">
+                                <img src="images/jogos-vorazes.jpg" alt="Jogos Vorazes">
+                            </div>
+                            <div class="book-card-back">
+                                <h4>Jogos Vorazes</h4>
+                                <p class="author">Suzanne Collins</p>
+                                <p class="description">Em um futuro distópico, jovens são forçados a lutar até a morte em uma arena.</p>
+                                <button class="btn-small">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-card-inner">
+                            <div class="book-card-front">
+                                <img src="images/assim-que-acaba.jpg" alt="Assim que Acaba">
+                            </div>
+                            <div class="book-card-back">
+                                <h4>Assim que Acaba</h4>
+                                <p class="author">Colleen Hoover</p>
+                                <p class="description">Uma história emocionante sobre relacionamentos e superação.</p>
+                                <button class="btn-small">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-card-inner">
+                            <div class="book-card-front">
+                                <img src="images/percy-jackson.jpg" alt="Percy Jackson">
+                            </div>
+                            <div class="book-card-back">
+                                <h4>Percy Jackson</h4>
+                                <p class="author">Rick Riordan</p>
+                                <p class="description">Um jovem descobre ser filho de um deus grego e embarca em aventuras mitológicas.</p>
+                                <button class="btn-small">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-card-inner">
+                            <div class="book-card-front">
+                                <img src="images/lovecraft.jpg" alt="Lovecraft">
+                            </div>
+                            <div class="book-card-back">
+                                <h4>Contos de H.P. Lovecraft</h4>
+                                <p class="author">H.P. Lovecraft</p>
+                                <p class="description">Histórias de horror cósmico que desafiam a compreensão humana.</p>
+                                <button class="btn-small">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="new-releases">
+                <h3>Lançamentos</h3>
+                <div class="new-releases-grid">
+                    <div class="new-book">
+                        <img src="images/new-book1.jpg" alt="Novo Livro 1">
+                        <div class="new-book-info">
+                            <h4>Duna</h4>
+                            <p>Frank Herbert</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-book">
+                        <img src="images/new-book2.jpg" alt="Novo Livro 2">
+                        <div class="new-book-info">
+                            <h4>1984</h4>
+                            <p>George Orwell</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-book">
+                        <img src="images/new-book3.jpg" alt="Novo Livro 3">
+                        <div class="new-book-info">
+                            <h4>O Silmarillion</h4>
+                            <p>J.R.R. Tolkien</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Sobre Nós -->
+        <section class="about-section" id="about">
+            <div class="section-header">
+                <h2>Sobre Nós</h2>
+                <p>Conheça a história da Scriptum</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/library.jpg" alt="Biblioteca Scriptum">
+                </div>
+                <div class="about-text">
+                    <h3>Nossa História</h3>
+                    <p>Fundada em 2010, a Biblioteca Scriptum nasceu do sonho de criar um espaço onde os amantes da literatura pudessem se encontrar e compartilhar sua paixão pelos livros.</p>
+                    <p>Começamos com uma pequena coleção de 500 livros e hoje contamos com mais de 20.000 títulos em nosso acervo, abrangendo os mais diversos gêneros literários.</p>
+                    <h3>Nossa Missão</h3>
+                    <p>Acreditamos que a leitura é uma ferramenta poderosa de transformação social e individual. Nossa missão é democratizar o acesso à literatura de qualidade e fomentar o hábito da leitura em todas as idades.</p>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number">20.000+</span>
+                            <span class="stat-label">Livros</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5.000+</span>
+                            <span class="stat-label">Membros</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Anos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-section">
+                <h3>Nossa Equipe</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="images/team1.jpg" alt="Membro da Equipe 1">
+                        </div>
+                        <h4>Maria Silva</h4>
+                        <p>Fundadora & Diretora</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="images/team2.jpg" alt="Membro da Equipe 2">
+                        </div>
+                        <h4>João Santos</h4>
+                        <p>Curador Literário</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="images/team3.jpg" alt="Membro da Equipe 3">
+                        </div>
+                        <h4>Ana Oliveira</h4>
+                        <p>Bibliotecária Chefe</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção de Contato -->
+        <section class="contact-section" id="contact">
+            <div class="section-header">
+                <h2>Contato</h2>
+                <p>Entre em contato conosco</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Av. dos Livros, 123 - São Paulo, SP</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(11) 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contato@scriptum.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 9h às 21h</p>
+                            <p>Sábados: 10h às 18h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Seu email">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" placeholder="Assunto da mensagem">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" rows="5" placeholder="Sua mensagem"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Logo Scriptum" class="logo">
+                <h2>Scriptum</h2>
+            </div>
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#books">Livros</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#">Ficção</a></li>
+                    <li><a href="#">Não-Ficção</a></li>
+                    <li><a href="#">Infantil</a></li>
+                    <li><a href="#">Acadêmico</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Inscreva-se para receber novidades</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Seu email">
+                    <button type="submit">Inscrever</button>
+                </div>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Scriptum - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

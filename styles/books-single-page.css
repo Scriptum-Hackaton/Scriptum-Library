@@ -1,0 +1,174 @@
+.single-book {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+}
+
+.book-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    overflow: hidden;
+}
+
+.book-carousel .book-img {
+    width: 500px; 
+    height: 700px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+}
+
+.carousel-slide {
+    min-width: 500px; 
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.prev-btn {
+    left: 0px;
+}
+
+.next-btn {
+    right: 0px;
+}
+
+/* Right Contents */
+
+.right-content {
+    width: 800px;
+    background: radial-gradient(#1b1427 80%,  #0b090f 100%);
+    padding: 50px;
+    border-radius: 100px;
+    /* margin-left: 20px; */
+}
+
+.right-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.right-content .author {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.right-content .description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.right-content .buy-button,
+.right-content .wishlist-button {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.right-content .buy-button {
+    background-color: #007bff;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.right-content .buy-button:hover {
+    background-color: #0056b3;
+}
+.right-content .wishlist-button:hover {
+    background-color: #ff6347;
+}
+
+.right-content .wishlist-button {
+    background-color: #ff4757;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.right-content .book-details {
+    /* background-color: blue; */
+    padding: 5px;
+}
+
+.right-content .book-details h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.right-content .book-details strong {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.right-content .book-details p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.right-content .book-details .sinopse {
+    font-size: .85rem;
+    margin: 10px 0;
+}
+
+/* MOdal do livro */
+
+.modal-book-reading {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-book-reading .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.modal-book-reading .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.modal-book-reading .close:hover,
+.modal-book-reading .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

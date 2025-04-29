@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/Scriptum.png">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <title>Scriptum - O Pedido da Fada Madrinha</title>
 </head>
+
 <body>
     <div class="background-home">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
     </div>
-    
+
     <header>
         <div class="logo-container">
             <img src="../assets/Scriptum.png" alt="Logo Scriptum" class="logo">
@@ -23,8 +27,8 @@
         </div>
         <nav>
             <ul class="menu">
-                <li><a href="../index.html" class="active">Home</a></li>
-                <li><a href="../index.html#books">Livros</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#books" class="active">Livros</a></li>
                 <li><a href="../index.html#about">Sobre Nós</a></li>
                 <li><a href="../index.html#contact">Contato</a></li>
             </ul>
@@ -37,15 +41,50 @@
         </div>
     </header>
 
-    <main>
-        <div class="book-images">
-            <img src="" alt="" class="book-img">
-            <img src="" alt="" class="book-img">
-            <img src="" alt="" class="book-img">
-            <img src="" alt="" class="book-img">
+    <main class="single-book">
+        <div class="book-carousel">
+            <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <img src="../assets/livros/O Pedido da Fada Madrinha.jpg" alt="Capa do Livro" class="book-img">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="../assets/livros/O Pedido da Fada Madrinha/imagem2.jpg" alt="Imagem 2"
+                            class="book-img">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="../assets/livros/O Pedido da Fada Madrinha/imagem3.jpg" alt="Imagem 3"
+                            class="book-img">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="../assets/livros/O Pedido da Fada Madrinha/imagem4.jpg" alt="Imagem 4"
+                            class="book-img">
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="right-content">
+            <h2>O Pedido da Fada Madrinha</h2>
+            <p class="author">Autor: <span>Luiz Eduardo de Oliveira</span></p>
+            <p class="description">Este conto de fadas moderno reúne personagens muito queridas e vai fazer os leitores
+                refletirem sobre os seus desejos e pedidos ― em meio a muitas risadas!</p>
+            <button class="buy-button"><i class="fas fa-book"></i> Ler Agora</button>
+            <button class="wishlist-button"><i class="fas fa-heart"></i> Adicionar aos favoritos</button>
+            <div class="book-details">
+                <h3>Detalhes do Livro</h3>
+                <p><strong>Gênero:</strong> Infantil</p>
+                <p><strong>Páginas:</strong> 32</p>
+                <p><strong>Editora:</strong> Companhia das Letrinhas</p>
+                <p><strong>Ano de Lançamento:</strong> 2023</p>
+                <p><strong>ISBN:</strong> 978-6554850063</p>
+                <p class="sinopse"><strong>Sinopse:</strong> <br> A Fada Madrinha está cansada! Afinal, ela trabalha sem parar para atender a todos os pedidos das princesas dos contos de fadas. Mas hoje é uma data especial: é o aniversário da Fada Madrinha! E se ela resolvesse tirar um merecido dia de folga? O que será que aconteceria com o reino encantado? <br>
+                    Esta nova versão da Fada Madrinha apresentada nesta história da coleção Canoa vai mudar a relação que temos com a já tão conhecida personagem de tantos contos de fadas. Escrito por Janaina Tokitaka e ricamente ilustrado por Flávia Borges, este livro vai surpreender, fazer pensar e arrancar risadas de crianças e adultos. A coleção Canoa tem como objetivo levar literatura infantil de qualidade a um preço popular para todos os pequenos leitores.</p>
+            </div>
         </div>
     </main>
-    
+
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
@@ -90,7 +129,81 @@
         </div>
     </footer>
 
+    <div class="modal-book-reading">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leitura do Livro</h2>
+            <iframe src="https://www.yumpu.com/pt/document/read/67009845/o-pedido-da-fada-madrinha" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
     <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.next-btn');
+        const prevButton = document.querySelector('.prev-btn');
+
+        const slideWidth = slides[0].getBoundingClientRect().width;
+
+        // Arrange the slides next to one another
+        slides.forEach((slide, index) => {
+            slide.style.left = slideWidth * index + 'px';
+        });
+
+        const moveToSlide = (track, currentSlide, targetSlide) => {
+            track.style.transform = `translateX(-${targetSlide.style.left})`;
+            currentSlide.classList.remove('current-slide');
+            targetSlide.classList.add('current-slide');
+        };
+
+        // When clicking the next button
+        nextButton.addEventListener('click', () => {
+            const currentSlide = track.querySelector('.current-slide');
+            const nextSlide = currentSlide.nextElementSibling;
+
+            if (nextSlide) {
+                moveToSlide(track, currentSlide, nextSlide);
+            }
+        });
+
+        // When clicking the previous button
+        prevButton.addEventListener('click', () => {
+            const currentSlide = track.querySelector('.current-slide');
+            const prevSlide = currentSlide.previousElementSibling;
+
+            if (prevSlide) {
+                moveToSlide(track, currentSlide, prevSlide);
+            }
+        });
+
+
+
+        // Modal for book reading
+
+        const modal = document.querySelector('.modal-book-reading');
+        const modalContent = document.querySelector('.modal-content');
+        const closeButton = document.querySelector('.close');
+        const readButton = document.querySelector('.buy-button');
+        const favoriteButton = document.querySelector('.wishlist-button');
+        const iframe = modalContent.querySelector('iframe');
+
+        const closeModal = () => {
+            modal.style.display = 'none';
+            iframe.src = ''; // Stop the video when closing the modal
+        };
+
+        const openModal = () => {
+            modal.style.display = 'block';
+            iframe.src = 'https://www.yumpu.com/pt/document/read/67009845/o-pedido-da-fada-madrinha'; // Set the video source
+        };
+
+        readButton.addEventListener('click', openModal);
+        closeButton.addEventListener('click', closeModal);
+    </script>
+
 </body>
+
 </html>

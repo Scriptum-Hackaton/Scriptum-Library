@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle por Mão - MediaPipe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background: lightblue;
+      overflow: hidden; /* Impede o scroll da página */
+    }
+  
+    #input_video, #output_canvas {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 320px;
+      height: 240px;
+      border-radius: 8px;
+      z-index: 100;
+      transform: translate3d(0, 0, 0); /* Força o uso de renderização acelerada pelo hardware */
+      pointer-events: none; /* Impede que o canvas interfira com os controles */
+    }
+  
+    #output_canvas {
+      pointer-events: none;
+    }
+  
+    .conteudo {
+      max-width: 800px;
+      margin: auto;
+    }
+  
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+  #input_video, #output_canvas {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+  }
+}
+
+  </style>
+  
+</head>
+<body>
+
+  <button id="ativarControle" style="position: fixed; top: 20px; right: 120px; z-index: 200;">
+    Ativar Controle por Mão
+  </button>
+  
+  <button id="pararControle" style="position: fixed; top: 20px; right: 20px; z-index: 200;">
+    Parar Controle por Mão
+  </button>
+  
+
+  <h1>Controle de Scroll com a Mão 🖐️</h1>
+  <div class="conteudo">
+    <!-- Texto longo para teste de rolagem -->
+    <p>
+      O nome verdadeiro da estagiária era Maria Amélia, mas como todos na família desde sempre a chamaram Pris, foi com esse apelido que ela se apresentou aos colegas na Grande Biblioteca. Uma das bibliotecárias perguntou se os pais dela eram fãs de Blade runner mas foram obrigados a lhe dar o nome das avós por pressão familiar. Não, não era isso, mas não era a primeira vez que Pris ouvia que seu apelido tinha a ver com esse filme. Precisava assisti-lo qualquer dia.
+
+      Pris, estudante de letras que amava livros e lembrava com carinho da moça da pequena biblioteca da escola onde estudou, ficou feliz em conseguir um estágio num local para ela tão mitológico. Emprestar livros para a população e ajudar as pessoas a escolherem suas leituras parecia-lhe o melhor trabalho do mundo. Até a realidade cair pesadamente sobre ela.
+      
+      A estagiária não conseguia conviver com a agressividade das pessoas. Quando um leitor grosseiro ou impaciente a tratava mal, ficava completamente sem ação e chegava a chorar. O colegas mais velhos tentavam ensiná-la a lidar com os “ossos”, explicavam que não podia ser tão sensível e “levar para o pessoal”, mas não adiantava. Pris simplesmente não conseguia entender como alguém podia tratar mal uma pessoa que não apenas estava trabalhando, mas tentando sinceramente ajudar. O chefe logo percebeu isso e a afastou um pouco do contato com o público. Pris ficou meio triste com isso, mas entendeu, e como amava mesmo os livros, sentia-se feliz em guardá-los nas estantes, trocar etiquetas e separar os que precisavam de reparos. E ainda havia momentos em que ela ficava no balcão de atendimento, cobrindo horário de jantar dos colegas.
+      
+      Parecia estar tudo bem assim, até que o Nojento a descobriu. O Nojento era o usuário mais detestado pelos funcionários da Grande Biblioteca. O homem não chegava a ser abertamente grosseiro, mas conseguia ser extremamente desagradável apenas com um olhar ou um comentário irônico, particularmente se era atendido por um funcionário negro, mulher ou nitidamente homossexual, como era o caso do chefe da Pris. Esse era o único que não se deixava afetar pelo Nojento, porque também sabia usar apenas um olhar para colocar as pessoas em seu devido lugar. Diziam que o Nojento era membro de uma organização fascista, mas ninguém, conseguiu descobrir nada sobre a criatura. “É só uma cria do inferno nascida do cu de um demônio de segunda”, dizia uma das moças da faxina, desbocada e muito respeitada por essa qualidade. E o Nojento, com seu cabelo ensebado e seu queixo de Goebbels, começou a frequentar a Grande Biblioteca justamente no horário em que Pris estava atendendo e que seu chefe já havia ido embora. O homem parecia gostar dela, ainda que de forma desprezível. Fazia elogios ao seu cabelo e roupas, olhava para a moça com aquele olhar que os homens parecem praticar em frente ao espelho para provocar repulsa nas mulheres e até chegou a levar um chocolate vagabundo de presente, atirado à lixeira assim que o desinfeliz virou as costas.
+      
+      Pris estava começando a entrar em desespero. Quanto mais ela demonstrava sua aversão, mais o homem parecia decidido a importuná-la, divertindo-se com a aflição da estagiária. E o pior é que não havia nada de concreto que pudesse motivar uma reclamação. Pris receava que lhe dissessem que precisava aprender a lidar com “galanteios”, como já ouvira uma vez na faculdade, e tinha medo de que a mandassem embora por ser uma pessoa “difícil”, que chorava à toa e criava problemas. Os colegas diziam que não, que ninguém faria isso com ela, mas Pris tinha dúvidas. Até o chefe, que a entendia e protegia, parecia não ter muita certeza da reação da chefe da Grande Biblioteca, que não gostava de lidar com esse tipo de problema.
+      
+      Naquele dia, ela não estava no balcão de empréstimos no horário habitual, porque dois dos colegas estavam trabalhando até mais tarde, pagando horas devidas, e aproveitou para ir resolver um problema na impressora de etiquetas na sala da catalogação. O Alencar viu, com desgosto, o Nojento entrar pela porta, já com aquele sorriso seboso na cara, sorriso que se apagou assim que não viu sua presa. O desgraçado ficou por ali de bobeira por uns minutos, mexendo no expositor de livros novos, até que Alencar e a colega de balcão se distraíram com uns jovens perdidos no universo dos catálogos e o perderam de vista. Desconfiado, Alencar foi dar uma busca e viu o sujeito entrar na área reservada aos funcionários, furtivo.
+      
+      Nesse dia, a bibliotecária que dava plantão noturno era a Fernanda, do Departamento de Aquisições. Fernandona, como a chamavam os poucos funcionários que não tinham medo dela, era uma ex-jogadora de basquete e maratonista de exatos um metro e oitenta e quatro, uma negra de braços fortes, sorriso glorioso e fama de não levar desaforo para casa. Alencar avisou, “ô Fernanda, o cara que persegue a menina foi atrás dela lá no fundo, vou chamar o segurança”.
+      
+      – Espera um pouco aí – avisou Fernanda, que já conhecia o sujeito e a história toda do assédio a Pris, erguendo-se nos saltos até atingir quase um metro e noventa.
+      
+      Alencar achou melhor não discutir, só ligou discretamente para a portaria enquanto a Fernandona marchava para a porta dos serviços internos. O Nojento estava lá, no largo corredor cheio de portas, provavelmente esperando a estagiária aparecer.
+      
+      – Procurando o quê, amigo? – a bibliotecária falou alto, sem se preocupar em ser educada. Educação não se aplicava ao caso.
+      – Calma aí, negona. O banheiro não é mais aqui?
+      
+      Fernanda percebeu alguma coisa estranha no ar, algo pesado e viscoso. Como se tivesse entrado num ambiente contaminado ou num matadouro. O homem sorria, provocador, e ela avançou, sentindo o tigre subir dentro de si. Como no dia em que impediu o pai de bater na mãe, como na ocasião em que reagiu na rua a uma ofensa racista e quase foi presa. Empurrou o homem de encontro à parede, com toda a força, segurou-o pelo pescoço com as duas mãos e apertou um pouco, cheia de repugnância. O Nojento tentou se debater, mas Fernanda era bem mais forte do que ele e ambos sabiam disso. Falou baixo e pausadamente, deixando o tigre rosnar livremente:
+      
+      – Você sabe que não. E sabe também que não vai voltar aqui nunca mais e, se voltar, vai ser de cabeça baixa, olhando pro chão. Você NUNCA MAIS vai dizer outra palavra nesta biblioteca que não seja “por favor” e “muito obrigado” e NUNCA MAIS vai olhar para aquela menina. Entendeu? Fui negra e clara?
+      
+      Assim que o homem conseguiu abanar a cabeça em concordância, Fernanda o deixou ir. Saiu apressado, quase correndo, mas ainda conseguiu ensaiar um vago gesto de despedida para Alencar e os demais, que o olhavam perplexos. Para manter um resto de dignidade, sem dúvida. A bibliotecária veio logo atrás, sentindo o tigre recuar lentamente. O ar do grande salão de entrada também parecia sujo, como se o homem em fuga tivesse deixado pra trás a sua nuvem escura.
+      
+      Fernanda ficou um pouco por ali, parada, tentando se recompor. Sentia nojo das mãos que haviam tocado no homem e uma vaga sensação de mal-estar parecia correr pelas suas veias. E foi nesse momento que entrou o Francês.
+      
+      Alain era um professor da universidade que frequentava bastante a seção de obras raras, para alguma pesquisa acadêmica. Muito gentil, embora reservado, era bastante querido por todos os funcionários. As meninas o achavam bonito, embora fosse apenas um intelectual ossudo e meio velhusco, porque havia uma doçura em suas maneiras que encantava de imediato. No exato instante em que ele entrou, Fernanda percebeu que o ar pesado se dissipava, dando lugar a uma luminosidade diferente da luz habitual do ambiente. Ao vê-la ali parada, ainda meio em choque com o que acabara de fazer, o Francês se aproximou e perguntou, com seu sotaque forte:
+      
+      – Que foi, Fernanda? Tudo bem com você?
+      
+      – Tudo bem, meu lindo. Foi só uma coisa estranha que eu precisei fazer e que me deixou nervosa.
+      
+      Alain franziu a testa e alisou levemente a lateral do braço da bibliotecária, num gesto de consolo.  Mais calma, Fernanda agradeceu pela preocupação, fez um sinal de positivo para o segurança que havia chegado com cara de ponto de interrogação e foram todos cuidar de suas vidas. A luz leve e brilhante que entrou com o Francês já havia tomado todo o espaço aéreo da Grande Biblioteca.
+      
+      O Nojento nunca mais apareceu e Pris nem ficou sabendo da história. Combinaram de não contar nada para não assustá-la mais ainda. Apenas soube, por Alencar, que a Fernandona tinha algo a ver com o desaparecimento do “encosto” e a abraçou muito. Meses depois foi aberto um concurso público, com duas vagas para a Grande Biblioteca e ela se inscreveu. Decidira, afinal, que trabalhar em biblioteca era o que desejava da vida, apesar dos percalços todos. O chefe disse que, à medida que ela fosse ficando mais velha, as pessoas naturalmente a respeitariam mais. E depois, com a maturidade as lágrimas tendem a secar.  Mais tarde, pensava Pris,  poderia pensar em cursar Biblioteconomia. Por que não?
+      </p>
+    <!-- Repita esse parágrafo várias vezes como quiser -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lorem justo...
+    </p>
+    <p>
+      <!-- Copie/cole mais conteúdo aqui para testar o scroll -->
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat bibendum risus a posuere...
+    </p>
+  </div>
+
+  <video id="input_video" autoplay muted></video>
+  <canvas id="output_canvas"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+  <script>
+    const videoElement = document.getElementById('input_video');
+    const canvasElement = document.getElementById('output_canvas');
+    const canvasCtx = canvasElement.getContext('2d');
+  
+    const hands = new Hands({
+      locateFile: (file) => {
+        return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
+      }
+    });
+  
+    hands.setOptions({
+      maxNumHands: 2,
+      modelComplexity: 1,
+      minDetectionConfidence: 0.7,
+      minTrackingConfidence: 0.7
+    });
+  
+    let lastScrollY = null;
+    let lastZoomDist = null;
+    let zoomScale = 1;
+  
+    hands.onResults((results) => {
+      canvasCtx.save();
+      canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+      canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
+  
+      const handsLandmarks = results.multiHandLandmarks;
+      const handedness = results.multiHandedness;
+  
+      if (handsLandmarks && handedness) {
+        for (let i = 0; i < handsLandmarks.length; i++) {
+          const landmarks = handsLandmarks[i];
+          const handLabel = handedness[i].label; // "Left" ou "Right"
+  
+          const polegar = landmarks[4];
+          const indicador = landmarks[8];
+          const centro = landmarks[9];
+  
+          const dx = polegar.x - indicador.x;
+          const dy = polegar.y - indicador.y;
+          const distancia = Math.sqrt(dx * dx + dy * dy);
+  
+          // Desenhar pontos no canvas
+          [polegar, indicador].forEach((ponto) => {
+            canvasCtx.beginPath();
+            canvasCtx.arc(ponto.x * canvasElement.width, ponto.y * canvasElement.height, 5, 0, 2 * Math.PI);
+            canvasCtx.fillStyle = handLabel === "Right" ? "blue" : "red";
+            canvasCtx.fill();
+          });
+  
+          // INVERTE os controles por causa da imagem espelhada
+          if (handLabel === "Left") {
+            // Scroll com a mão visualmente esquerda (handLabel = Left)
+            if (distancia < 0.05) {
+              const y = centro.y * canvasElement.height;
+              if (lastScrollY !== null) {
+                const deltaY = y - lastScrollY;
+                window.scrollBy(0, deltaY * 9); // sensibilidade de scroll
+              }
+              lastScrollY = y;
+            } else {
+              lastScrollY = null;
+            }
+          }
+  
+          if (handLabel === "Right") {
+            // Zoom com a mão visualmente direita (handLabel = Right)
+            if (lastZoomDist !== null) {
+              const delta = distancia - lastZoomDist;
+              zoomScale += delta * 1.5; // sensibilidade reduzida
+              zoomScale = Math.max(0.5, Math.min(zoomScale, 3));
+              document.body.style.transform = `scale(${zoomScale})`;
+              document.body.style.transformOrigin = "center center";
+            }
+            lastZoomDist = distancia;
+          }
+        }
+      } else {
+        lastScrollY = null;
+        lastZoomDist = null;
+      }
+  
+      canvasCtx.restore();
+    });
+  
+    const camera = new Camera(videoElement, {
+      onFrame: async () => {
+        await hands.send({ image: videoElement });
+      },
+      width: 320,
+      height: 240
+    });
+  
+    camera.start();
+
+    //outros trampos \
+    
+  </script>
+  
+  
+  
+  
+  
+</body>
+</html>

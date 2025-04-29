@@ -27,10 +27,10 @@
         </div>
         <nav>
             <ul class="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#books" >Livros</a></li>
-                <li><a href="../index.html#about">Sobre Nós</a></li>
-                <li><a href="../index.html#contact">Contato</a></li>
+                <li><a href="../index.html" >Home</a></li>
+                <li><a href="../index.html" >Livros</a></li>
+                <li><a href="../index.html">Sobre Nós</a></li>
+                <li><a href="../index.html">Contato</a></li>
             </ul>
         </nav>
         <div class="profile">
@@ -94,10 +94,10 @@
             <div class="footer-links">
                 <h3>Links Rápidos</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#books">Livros</a></li>
-                    <li><a href="#about">Sobre Nós</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#books">Livros</a></li>
+                    <li><a href="../index.html#about">Sobre Nós</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
                 </ul>
             </div>
             <div class="footer-categories">
@@ -133,7 +133,6 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>O Pedido da Fada Madrinha</h2>
-            p
             <p style="color: #000;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla repellat, dicta quos ex esse assumenda ipsam dignissimos est molestiae doloremque, magnam laudantium veniam, voluptate fuga itaque eligendi culpa accusamus inventore.
             Assumenda dolor veniam nesciunt explicabo quasi beatae deserunt perferendis itaque! Rerum sunt officiis dolor odio obcaecati ipsam quod mollitia sapiente velit, reprehenderit aliquid necessitatibus harum. Iste minus nihil dignissimos nisi.
             Non, et. Distinctio fugiat sit excepturi dolor rerum corporis rem possimus architecto animi, mollitia commodi voluptas reprehenderit maxime vitae iste ex voluptatum similique nam porro eaque magni. Assumenda, saepe in.
@@ -637,7 +636,15 @@
         </div>
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+
+    <!-- media pipe  -->
+    <video id="input_video" autoplay muted></video>
+    <canvas id="output_canvas"></canvas>
+  
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  
+    <script src="../media.js"></script>
     <script src="../script.js"></script>
     <script>
         const track = document.querySelector('.carousel-track');
@@ -687,20 +694,18 @@
         const closeButton = document.querySelector('.close');
         const readButton = document.querySelector('.buy-button');
         const favoriteButton = document.querySelector('.wishlist-button');
-        const iframe = modalContent.querySelector('iframe');
 
         const closeModal = () => {
             modal.style.display = 'none';
-            iframe.src = ''; // Stop the video when closing the modal
         };
 
         const openModal = () => {
             modal.style.display = 'block';
-            iframe.src = 'https://www.yumpu.com/pt/document/read/67009845/o-pedido-da-fada-madrinha'; // Set the video source
         };
 
         readButton.addEventListener('click', openModal);
         closeButton.addEventListener('click', closeModal);
+
     </script>
 
 </body>

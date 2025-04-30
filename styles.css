@@ -304,7 +304,7 @@ section.active {
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
-    background: var(--gradient-primary);
+    /* background: var(--gradient-primary); */
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -320,8 +320,9 @@ section.active {
 }
 
 .dice {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
     animation: pulse 2s infinite;
 }
 

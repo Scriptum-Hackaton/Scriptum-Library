@@ -7,12 +7,11 @@
     <link rel="icon" href="../assets/Scriptum.png">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <title>Scriptum - A Hora da Estrela - Ler Agora</title>
 
     <style>
+        /* Vídeo e Canvas para gestos */
         #input_video,
         #output_canvas {
             position: fixed;
@@ -23,28 +22,10 @@
             border-radius: 8px;
             z-index: 100;
             transform: translate3d(0, 0, 0);
-            /* Força o uso de renderização acelerada pelo hardware */
             pointer-events: none;
-            /* Impede que o canvas interfira com os controles */
-        }
-
-        #output_canvas {
-            pointer-events: none;
-        }
-
-        .conteudo {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-top: 60px;
         }
 
         @media (max-width: 600px) {
-
             #input_video,
             #output_canvas {
                 width: 100%;
@@ -54,18 +35,79 @@
                 border-radius: 0;
             }
         }
+
+        /* Botão de modo leitura */
+        #modoLeituraBtn {                   
+            position: fixed;                  
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #f4eec7;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            transition: background 0.3s;
+        }
+
+        #modoLeituraBtn:hover {
+            background-color: #e4dcaf;
+        }
+
+        /* Estilo aplicado ao modo leitura */
+        .modo-leitura {
+            background-color: #fefbe9 !important;
+            color: #333 !important;
+            font-size: 1.2em;
+            line-height: 1.8em;
+            padding: 20px;
+        }
+
+        /* Estilização do conteúdo */
+        .content-book {
+            min-width: 100%;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-top: 40px;
+        }
+
+        #closeBookBtn {
+            font-size: 2rem;
+            border: none;
+            cursor: pointer;
+            color: #fff !important;
+        }
+        
+        #closeBook {
+            position: absolute;
+            top: 10%;
+            right: 20%;
+            background: transparent;
+            
+        }
+
+        
     </style>
 </head>
 
 <body>
 
-
-    <main class="content-book">
+    <main id="mainBook" class="content-book">
         <div class="livro">
-            <a href="./Livro-Psicológico.html">
+            <a id="closeBookBtn" href="./Livro-Psicológico.html">
                 <button id="closeBook">&times;</button>
             </a>
             <h2>A Hora da Estrela</h2>
+            <button id="modoLeituraBtn">Modo Leitura</button>
+
+            <!-- Exemplo de conteúdo -->
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum. Expedita nemo rem corporis
                 blanditiis
@@ -256,9 +298,10 @@
                 dolore, quasi facilis dignissimos officia veritatis error consequuntur explicabo aperiam, neque nisi
                 asperiores nostrum. Culpa.
             </p>
-            
+
         </div>
     </main>
+
 
     <!-- media pipe  -->
     <video id="input_video" autoplay muted></video>
@@ -278,9 +321,21 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
       </script>
 
-    <script src="../media.js"></script>
+
+<script src="../media.js"></script>
     <script src="../script.js"></script>
+
+
     <script>
+        
+        // Modo leitura
+        const btn = document.getElementById('modoLeituraBtn');
+        const main = document.getElementById('mainBook');
+
+        btn.addEventListener('click', () => {
+            main.classList.toggle('modo-leitura');
+        });
+
         const track = document.querySelector('.carousel-track');
         const slides = Array.from(track.children);
         const nextButton = document.querySelector('.next-btn');
@@ -318,7 +373,6 @@
                 moveToSlide(track, currentSlide, prevSlide);
             }
         });
-
 
     </script>
 

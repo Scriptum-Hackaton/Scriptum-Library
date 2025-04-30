@@ -6,8 +6,8 @@
 }
 
 .book-carousel {
-    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 3rem;
     width: 100%;
@@ -128,7 +128,7 @@
 }
 
 /* Novos Lançamentos */
-.new-releases {
+/* .new-releases {
     margin-top: 3rem;
 }
 
@@ -181,4 +181,4 @@
 .rating {
     color: #ffd700;
     font-size: 0.9rem;
-}
+} */

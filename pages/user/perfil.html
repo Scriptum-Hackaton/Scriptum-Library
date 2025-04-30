@@ -50,7 +50,7 @@
         <div class="user-profile-info">
             <div class="user-info">
                 <h2>Nome do Usuário</h2>
-                <p>Email:</p>
+                <p>email@scriptum.com</p>
             </div>
             <div class="favorite-books">
                 <h3>Livros Favoritos</h3>
@@ -58,20 +58,36 @@
                     <li>
                         <img src="../../assets/livros/A Princesa e o Queijo Quente.jpg" alt="Capa do Livro">
                         <p>A Princesa e o Queijo Quente</p>
+                        <button class="remove-favorite"
+                            onclick="removeFavorite('A Princesa e o Queijo Quente')">Remover</button>
                     </li>
                     <li>
                         <img src="../../assets/livros/O Pedido da Fada Madrinha.jpg" alt="Capa do Livro">
                         <p>O Pedido da Fada Madrinha</p>
+                        <button class="remove-favorite"
+                            onclick="removeFavorite('O Pedido da Fada Madrinha')">Remover</button>
                     </li>
                     <li>
-                        <img src="../../assets/Scriptum.png" alt="Capa do Livro">
-                        <p>Título do Livro</p>
+                        <img src="../../assets/livros/O Pedido da Fada Madrinha.jpg" alt="Capa do Livro">
+                        <p>O Pedido da Fada Madrinha</p>
+                        <button class="remove-favorite"
+                            onclick="removeFavorite('O Pedido da Fada Madrinha')">Remover</button>
+                    </li>
+                    <li>
+                        <img src="../../assets/livros/O Pedido da Fada Madrinha.jpg" alt="Capa do Livro">
+                        <p>O Pedido da Fada Madrinha</p>
+                        <button class="remove-favorite"
+                            onclick="removeFavorite('O Pedido da Fada Madrinha')">Remover</button>
+                    </li>
+                    <li>
+                        <img src="../../assets/livros/O Pedido da Fada Madrinha.jpg" alt="Capa do Livro">
+                        <p>O Pedido da Fada Madrinha</p>
+                        <button class="remove-favorite"
+                            onclick="removeFavorite('O Pedido da Fada Madrinha')">Remover</button>
                     </li>
                 </ul>
             </div>
         </div>
-
-        
     </main>
 
     <footer>
@@ -120,7 +136,20 @@
 
     <script src="../script.js"></script>
     <script>
+        function removeFavorite(bookTitle) {
+            if (confirm(`Tem certeza de que deseja remover "${bookTitle}" dos favoritos?`)) {
+                // Encontra o botão que foi clicado
+                const button = event.target;
 
+                // Encontra o elemento <li> correspondente ao botão
+                const listItem = button.closest('li');
+
+                // Remove o elemento <li> do DOM
+                listItem.remove();
+
+                alert(`"${bookTitle}" foi removido dos favoritos.`);
+            }
+        }
     </script>
 
 </body>

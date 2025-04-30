@@ -1,0 +1,94 @@
+.login-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-form .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-bg);
+    border-radius: 50px;
+    width: 650px;
+    padding: 20px 40px 40px 40px;
+}
+
+.login-form .form-container h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+.login-form .form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--card-bg);
+}
+
+.login-form .form-container form .input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-form .form-container form .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-form .form-container form .input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* .login-form .form-container form a.login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    text-decoration: none;
+} */
+
+.login-form .form-container form a.login-button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.login-form .form-container form .input-group label {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+.login-form .form-container form .eu-nao-tenho-conta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.login-form .form-container form .eu-nao-tenho-conta a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+.login-form .form-container form .eu-nao-tenho-conta a:hover {
+    text-decoration: underline;
+}

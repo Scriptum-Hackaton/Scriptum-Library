@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/Scriptum.png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <title>Scriptum - Login</title>
+</head>
+
+<body>
+    <div class="background-home">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="../../assets/Scriptum.png" alt="Logo Scriptum" class="logo">
+            <h1>Scriptum</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Home</a></li>
+                <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Livros</a></li>
+                <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Sobre Nós</a></li>
+                <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <a href="#"><i class="fas fa-user-circle"></i></a>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main class="login-form">
+        <div class="background-login">
+            <img src="../../assets/Scriptum.png" alt="Logo Scriptum" class="logo-login">
+        </div>
+        <div class="form-container">
+            <h2>Login</h2>
+            <form action="" method="">
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <p class="eu-nao-tenho-conta">Não tem uma conta? <a href="./register.html">Registrar</a></p>
+                <a class="login-button" href="./perfil.html">
+                    <!-- <button type="submit"></button> -->
+                    Entrar
+                </a>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../../assets/Scriptum.png" alt="Logo Scriptum" class="logo">
+                <h2>Scriptum</h2>
+            </div>
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#books">Livros</a></li>
+                    <li><a href="../index.html#about">Sobre Nós</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#">Ficção</a></li>
+                    <li><a href="#">Não-Ficção</a></li>
+                    <li><a href="#">Infantil</a></li>
+                    <li><a href="#">Acadêmico</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Inscreva-se para receber novidades</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Seu email">
+                    <button type="submit">Inscrever</button>
+                </div>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/scriptum_libraryy/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Scriptum - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+
+    </script>
+
+</body>
+
+</html>

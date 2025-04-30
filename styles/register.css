@@ -1,0 +1,94 @@
+.register-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.register-form .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-bg);
+    border-radius: 50px;
+    width: 650px;
+    padding: 20px 40px 40px 40px;
+}
+
+.register-form .form-container h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.register-form .form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--card-bg);
+}
+
+.register-form .form-container form .input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.register-form .form-container form .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register-form .form-container form .input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.register-form .form-container form .register-button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.register-form .form-container form .register-button:hover {
+    background-color: var(--background-dark);
+}
+
+.register-form .form-container form .input-group label {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.register-form .form-container form .ja-tenho-conta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.register-form .form-container form .ja-tenho-conta a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.register-form .form-container form .ja-tenho-conta a:hover {
+    text-decoration: underline;
+}

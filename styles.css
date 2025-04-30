@@ -1,5 +1,7 @@
 @import url("./styles/background.css");
 @import url("./styles/books-single-page.css");
+@import url("./styles/login.css");
+@import url("./styles/register.css");
 
 /* Estilos Gerais */
 * {

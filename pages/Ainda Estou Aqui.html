@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/Scriptum.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <title>Scriptum - Ainda Estou Aqui - Ler Agora</title>
+
+    <style>
+        #input_video,
+        #output_canvas {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            height: 240px;
+            border-radius: 8px;
+            z-index: 100;
+            transform: translate3d(0, 0, 0);
+            /* Força o uso de renderização acelerada pelo hardware */
+            pointer-events: none;
+            /* Impede que o canvas interfira com os controles */
+        }
+
+        #output_canvas {
+            pointer-events: none;
+        }
+
+        .conteudo {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 600px) {
+
+            #input_video,
+            #output_canvas {
+                width: 100%;
+                height: auto;
+                bottom: 0;
+                right: 0;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <main class="content-book">
+        <div class="livro">
+            <a href="./Livro-Drama.html">
+                <button id="closeBook">&times;</button>
+            </a>
+            <h2>Ainda Estou Aqui</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum. Expedita nemo rem corporis
+                blanditiis
+                eaque recusandae possimus doloribus nihil perferendis corrupti ea laboriosam, totam, architecto ullam
+                nobis,
+                aliquid quis.
+                Explicabo quos esse molestias ad. Architecto officia numquam est delectus repudiandae quae eos dolore,
+                in
+                itaque pariatur aperiam minima. Facilis iusto debitis consectetur. Beatae dicta ipsum omnis aliquam,
+                vitae
+                soluta.
+                Veniam dolorem, ullam saepe recusandae accusamus nobis ducimus, repellat nisi libero neque enim eaque
+                necessitatibus similique. Voluptatibus architecto odio, blanditiis quia ratione est quasi id modi beatae
+                reprehenderit, officia error.
+                Quos minus cumque veniam libero harum sint repudiandae eveniet omnis, praesentium nesciunt magnam eum
+                sed
+                dolore, quasi facilis dignissimos officia veritatis error consequuntur explicabo aperiam, neque nisi
+                asperiores nostrum. Culpa.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum. Expedita nemo rem corporis
+                blanditiis
+                eaque recusandae possimus doloribus nihil perferendis corrupti ea laboriosam, totam, architecto ullam
+                nobis,
+                aliquid quis.
+                Explicabo quos esse molestias ad. Architecto officia numquam est delectus repudiandae quae eos dolore,
+                in
+                itaque pariatur aperiam minima. Facilis iusto debitis consectetur. Beatae dicta ipsum omnis aliquam,
+                vitae
+                soluta.
+                Veniam dolorem, ullam saepe recusandae accusamus nobis ducimus, repellat nisi libero neque enim eaque
+                necessitatibus similique. Voluptatibus architecto odio, blanditiis quia ratione est quasi id modi beatae
+                reprehenderit, officia error.
+                Quos minus cumque veniam libero harum sint repudiandae eveniet omnis, praesentium nesciunt magnam eum
+                sed
+                dolore, quasi facilis dignissimos officia veritatis error consequuntur explicabo aperiam, neque nisi
+                asperiores nostrum. Culpa.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum. Expedita nemo rem corporis
+                blanditiis
+                eaque recusandae possimus doloribus nihil perferendis corrupti ea laboriosam, totam, architecto ullam
+                nobis,
+                aliquid quis.
+                Explicabo quos esse molestias ad. Architecto officia numquam est delectus repudiandae quae eos dolore,
+                in
+                itaque pariatur aperiam minima. Facilis iusto debitis consectetur. Beatae dicta ipsum omnis aliquam,
+                vitae
+                soluta.
+                Veniam dolorem, ullam saepe recusandae accusamus nobis ducimus, repellat nisi libero neque enim eaque
+                necessitatibus similique. Voluptatibus architecto odio, blanditiis quia ratione est quasi id modi beatae
+                reprehenderit, officia error.
+                Quos minus cumque veniam libero harum sint repudiandae eveniet omnis, praesentium nesciunt magnam eum
+                sed
+                dolore, quasi facilis dignissimos officia veritatis error consequuntur explicabo aperiam, neque nisi
+                asperiores nostrum. Culpa.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum. Expedita nemo rem corporis
+                blanditiis
+                eaque recusandae possimus doloribus nihil perferendis corrupti ea laboriosam, totam, architecto ullam
+                nobis,
+                aliquid quis.
+                Explicabo quos esse molestias ad. Architecto officia numquam est delectus repudiandae quae eos dolore,
+                in
+                itaque pariatur aperiam minima. Facilis iusto debitis consectetur. Beatae dicta ipsum omnis aliquam,
+                vitae
+                soluta.
+                Veniam dolorem, ullam saepe recusandae accusamus nobis ducimus, repellat nisi libero neque enim eaque
+                necessitatibus similique. Voluptatibus architecto odio, blanditiis quia ratione est quasi id modi beatae
+                reprehenderit, officia error.
+                Quos minus cumque veniam libero harum sint repudiandae eveniet omnis, praesentium nesciunt magnam eum
+                sed
+                dolore, quasi facilis dignissimos officia veritatis error consequuntur explicabo aperiam, neque nisi
+                asperiores nostrum. Culpa.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum. Expedita nemo rem corporis
+                blanditiis
+                eaque recusandae possimus doloribus nihil perferendis corrupti ea laboriosam, totam, architecto ullam
+                nobis,
+                aliquid quis.
+                Explicabo quos esse molestias ad. Architecto officia numquam est delectus repudiandae quae eos dolore,
+                in
+                itaque pariatur aperiam minima. Facilis iusto debitis consectetur. Beatae dicta ipsum omnis aliquam,
+                vitae
+                soluta.
+                Veniam dolorem, ullam saepe recusandae accusamus nobis ducimus, repellat nisi libero neque enim eaque
+                necessitatibus similique. Voluptatibus architecto odio, blanditiis quia ratione est quasi id modi beatae
+                reprehenderit, officia error.
+                Quos minus cumque veniam libero harum sint repudiandae eveniet omnis, praesentium nesciunt magnam eum
+                sed
+                dolore, quasi facilis dignissimos officia veritatis error consequuntur explicabo aperiam, neque nisi
+                asperiores nostrum. Culpa.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum. Expedita nemo rem corporis
+                blanditiis
+                eaque recusandae possimus doloribus nihil perferendis corrupti ea laboriosam, totam, architecto ullam
+                nobis,
+                aliquid quis.
+                Explicabo quos esse molestias ad. Architecto officia numquam est delectus repudiandae quae eos dolore,
+                in
+                itaque pariatur aperiam minima. Facilis iusto debitis consectetur. Beatae dicta ipsum omnis aliquam,
+                vitae
+                soluta.
+                Veniam dolorem, ullam saepe recusandae accusamus nobis ducimus, repellat nisi libero neque enim eaque
+                necessitatibus similique. Voluptatibus architecto odio, blanditiis quia ratione est quasi id modi beatae
+                reprehenderit, officia error.
+                Quos minus cumque veniam libero harum sint repudiandae eveniet omnis, praesentium nesciunt magnam eum
+                sed
+                dolore, quasi facilis dignissimos officia veritatis error consequuntur explicabo aperiam, neque nisi
+                asperiores nostrum. Culpa.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum. Expedita nemo rem corporis
+                blanditiis
+                eaque recusandae possimus doloribus nihil perferendis corrupti ea laboriosam, totam, architecto ullam
+                nobis,
+                aliquid quis.
+                Explicabo quos esse molestias ad. Architecto officia numquam est delectus repudiandae quae eos dolore,
+                in
+                itaque pariatur aperiam minima. Facilis iusto debitis consectetur. Beatae dicta ipsum omnis aliquam,
+                vitae
+                soluta.
+                Veniam dolorem, ullam saepe recusandae accusamus nobis ducimus, repellat nisi libero neque enim eaque
+                necessitatibus similique. Voluptatibus architecto odio, blanditiis quia ratione est quasi id modi beatae
+                reprehenderit, officia error.
+                Quos minus cumque veniam libero harum sint repudiandae eveniet omnis, praesentium nesciunt magnam eum
+                sed
+                dolore, quasi facilis dignissimos officia veritatis error consequuntur explicabo aperiam, neque nisi
+                asperiores nostrum. Culpa.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum. Expedita nemo rem corporis
+                blanditiis
+                eaque recusandae possimus doloribus nihil perferendis corrupti ea laboriosam, totam, architecto ullam
+                nobis,
+                aliquid quis.
+                Explicabo quos esse molestias ad. Architecto officia numquam est delectus repudiandae quae eos dolore,
+                in
+                itaque pariatur aperiam minima. Facilis iusto debitis consectetur. Beatae dicta ipsum omnis aliquam,
+                vitae
+                soluta.
+                Veniam dolorem, ullam saepe recusandae accusamus nobis ducimus, repellat nisi libero neque enim eaque
+                necessitatibus similique. Voluptatibus architecto odio, blanditiis quia ratione est quasi id modi beatae
+                reprehenderit, officia error.
+                Quos minus cumque veniam libero harum sint repudiandae eveniet omnis, praesentium nesciunt magnam eum
+                sed
+                dolore, quasi facilis dignissimos officia veritatis error consequuntur explicabo aperiam, neque nisi
+                asperiores nostrum. Culpa.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum. Expedita nemo rem corporis
+                blanditiis
+                eaque recusandae possimus doloribus nihil perferendis corrupti ea laboriosam, totam, architecto ullam
+                nobis,
+                aliquid quis.
+                Explicabo quos esse molestias ad. Architecto officia numquam est delectus repudiandae quae eos dolore,
+                in
+                itaque pariatur aperiam minima. Facilis iusto debitis consectetur. Beatae dicta ipsum omnis aliquam,
+                vitae
+                soluta.
+                Veniam dolorem, ullam saepe recusandae accusamus nobis ducimus, repellat nisi libero neque enim eaque
+                necessitatibus similique. Voluptatibus architecto odio, blanditiis quia ratione est quasi id modi beatae
+                reprehenderit, officia error.
+                Quos minus cumque veniam libero harum sint repudiandae eveniet omnis, praesentium nesciunt magnam eum
+                sed
+                dolore, quasi facilis dignissimos officia veritatis error consequuntur explicabo aperiam, neque nisi
+                asperiores nostrum. Culpa.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, harum. Expedita nemo rem corporis
+                blanditiis
+                eaque recusandae possimus doloribus nihil perferendis corrupti ea laboriosam, totam, architecto ullam
+                nobis,
+                aliquid quis.
+                Explicabo quos esse molestias ad. Architecto officia numquam est delectus repudiandae quae eos dolore,
+                in
+                itaque pariatur aperiam minima. Facilis iusto debitis consectetur. Beatae dicta ipsum omnis aliquam,
+                vitae
+                soluta.
+                Veniam dolorem, ullam saepe recusandae accusamus nobis ducimus, repellat nisi libero neque enim eaque
+                necessitatibus similique. Voluptatibus architecto odio, blanditiis quia ratione est quasi id modi beatae
+                reprehenderit, officia error.
+                Quos minus cumque veniam libero harum sint repudiandae eveniet omnis, praesentium nesciunt magnam eum
+                sed
+                dolore, quasi facilis dignissimos officia veritatis error consequuntur explicabo aperiam, neque nisi
+                asperiores nostrum. Culpa.
+            </p>
+            
+        </div>
+    </main>
+
+    <!-- media pipe  -->
+    <video id="input_video" autoplay muted></video>
+    <canvas id="output_canvas"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+    <script src="../media.js"></script>
+    <script src="../script.js"></script>
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.next-btn');
+        const prevButton = document.querySelector('.prev-btn');
+
+        const slideWidth = slides[0].getBoundingClientRect().width;
+
+        // Arrange the slides next to one another
+        slides.forEach((slide, index) => {
+            slide.style.left = slideWidth * index + 'px';
+        });
+
+        const moveToSlide = (track, currentSlide, targetSlide) => {
+            track.style.transform = `translateX(-${targetSlide.style.left})`;
+            currentSlide.classList.remove('current-slide');
+            targetSlide.classList.add('current-slide');
+        };
+
+        // When clicking the next button
+        nextButton.addEventListener('click', () => {
+            const currentSlide = track.querySelector('.current-slide');
+            const nextSlide = currentSlide.nextElementSibling;
+
+            if (nextSlide) {
+                moveToSlide(track, currentSlide, nextSlide);
+            }
+        });
+
+        // When clicking the previous button
+        prevButton.addEventListener('click', () => {
+            const currentSlide = track.querySelector('.current-slide');
+            const prevSlide = currentSlide.previousElementSibling;
+
+            if (prevSlide) {
+                moveToSlide(track, currentSlide, prevSlide);
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

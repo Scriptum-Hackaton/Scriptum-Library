@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/Scriptum.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <title>Scriptum - Ainda Estou Aqui</title>
+</head>
+
+<body>
+    <div class="background-home">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="../assets/Scriptum.png" alt="Logo Scriptum" class="logo">
+            <h1>Scriptum</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a style="cursor: pointer;" onclick="window.location.href = '../index.html'">Home</a></li>
+                <li><a style="cursor: pointer;" onclick="window.location.href = '../index.html'">Livros</a></li>
+                <li><a style="cursor: pointer;" onclick="window.location.href = '../index.html'">Sobre Nós</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <a href="./pages/user/login.html"><i class="fas fa-user-circle"></i></a>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main class="single-book">
+        <div class="book-carousel">
+            <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <img src="../assets/livros/Ainda Estou Aqui.jpg" alt="Capa do Livro" class="book-img">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="../assets/livros/Ainda Estou Aqui/imagem2.jpg" alt="Imagem 2" class="book-img">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="../assets/livros/Ainda Estou Aqui/imagem3.jpg" alt="Imagem 3" class="book-img">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="../assets/livros/Ainda Estou Aqui/imagem4.jpg" alt="Imagem 4" class="book-img">
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="right-content">
+            <h2>Ainda Estou Aqui</h2>
+            <p class="author">Autor: <span>Marcelo Rubens Paiva</span></p>
+            <p class="description">
+                Uma emocionante autobiografia que explora luto, memória e a busca pela verdade. 
+            </p>
+            <button class="buy-button"><i class="fas fa-book"></i> Ler Agora</button>
+            <button class="wishlist-button"><i class="fas fa-heart"></i> Adicionar aos favoritos</button>
+            <div class="book-details">
+                <h3>Detalhes do Livro</h3>
+                <p><strong>Gênero:</strong> Drama</p>
+                <p><strong>Páginas:</strong> 296</p>
+                <p><strong>Editora:</strong> Alfaguara</p>
+                <p><strong>Ano de Lançamento:</strong> 2015</p>
+                <p><strong>ISBN:</strong> 978-8579624162</p>
+                <p class="sinopse"><strong>Sinopse:</strong> <br> 
+                    O livro é uma autobiografia do autor, que narra sua vida após a morte de seu pai, o ex-governador de São Paulo, Rubens Paiva. A obra aborda temas como luto, perda e a busca por respostas sobre o passado. Marcelo compartilha suas memórias e reflexões sobre a relação com seu pai e os desafios enfrentados ao longo da vida. A narrativa é marcada por um tom emocional e íntimo, revelando a dor e a saudade que permeiam sua trajetória. Além disso, o autor também discute questões políticas e sociais do Brasil, trazendo à tona a importância da memória e da luta pela verdade. 
+
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../assets/Scriptum.png" alt="Logo Scriptum" class="logo">
+                <h2>Scriptum</h2>
+            </div>
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Home</a></li>
+                    <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'"">Livros</a></li>
+                    <li><a style=" cursor: pointer;" onclick="window.location.href = '../../index.html'"">Sobre Nós</a></li>
+                </ul>
+            </div>
+            <div class=" footer-categories">
+                            <h3>Categorias</h3>
+                            <ul>
+                                <li><a href="#">Ficção</a></li>
+                                <li><a href="#">Não-Ficção</a></li>
+                                <li><a href="#">Infantil</a></li>
+                                <li><a href="#">Acadêmico</a></li>
+                            </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Inscreva-se para receber novidades</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Seu email">
+                    <button type="submit">Inscrever</button>
+                </div>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/scriptum_libraryy/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Scriptum - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.next-btn');
+        const prevButton = document.querySelector('.prev-btn');
+
+        const slideWidth = slides[0].getBoundingClientRect().width;
+
+        // Arrange the slides next to one another
+        slides.forEach((slide, index) => {
+            slide.style.left = slideWidth * index + 'px';
+        });
+
+        const moveToSlide = (track, currentSlide, targetSlide) => {
+            track.style.transform = `translateX(-${targetSlide.style.left})`;
+            currentSlide.classList.remove('current-slide');
+            targetSlide.classList.add('current-slide');
+        };
+
+        // When clicking the next button
+        nextButton.addEventListener('click', () => {
+            const currentSlide = track.querySelector('.current-slide');
+            const nextSlide = currentSlide.nextElementSibling;
+
+            if (nextSlide) {
+                moveToSlide(track, currentSlide, nextSlide);
+            }
+        });
+
+        // When clicking the previous button
+        prevButton.addEventListener('click', () => {
+            const currentSlide = track.querySelector('.current-slide');
+            const prevSlide = currentSlide.previousElementSibling;
+
+            if (prevSlide) {
+                moveToSlide(track, currentSlide, prevSlide);
+            }
+        });
+
+
+
+        // Abrir pagina do livro
+
+        const readButton = document.querySelector('.buy-button');
+        const favoriteButton = document.querySelector('.wishlist-button');
+
+        const closeBook = () => {
+            window.location.href = './Livro-Drama.html'
+        };
+
+        const openBook = () => {
+            window.location.href = './Ainda Estou Aqui.html'
+        };
+
+        readButton.addEventListener('click', openBook);
+        closeButton.addEventListener('click', closeBook);
+
+    </script>
+
+</body>
+
+</html>

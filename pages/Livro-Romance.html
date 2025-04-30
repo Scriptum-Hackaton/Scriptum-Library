@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    
+
     <title>Scriptum - A Princesa e o Queijo Quente</title>
 </head>
 
@@ -49,7 +49,8 @@
             <div class="carousel-track-container">
                 <ul class="carousel-track">
                     <li class="carousel-slide current-slide">
-                        <img src="../assets/livros/A Princesa e o Queijo Quente.jpg" alt="Capa do Livro" class="book-img">
+                        <img src="../assets/livros/A Princesa e o Queijo Quente.jpg" alt="Capa do Livro"
+                            class="book-img">
                     </li>
                     <li class="carousel-slide">
                         <img src="../assets/livros/A Princesa e o Queijo Quente/imagem2.jpg" alt="Imagem 2"
@@ -82,8 +83,17 @@
                 <p><strong>Ano de Lançamento:</strong> 2023</p>
                 <p><strong>ISBN:</strong> 978-6588343586</p>
                 <p class="sinopse">
-                    <strong>Sinopse:</strong> 
-                    Lady Camembert quer viver em seus próprios termos, sem se casar. Ou melhor, sem ter que se casar com um homem. Mas a lei de seu reino diz que a fortuna da família não pode ser herdada por mulheres solteiras. Então, quando o pai dela morre, ela adota a única alternativa que lhe resta: se disfarça de homem e muda para a capital do Reino de Fromage. Ela, então, inicia uma nova vida como Conde Camembert. Entretanto, é difícil manter a discrição quando a bela Princesa Brie, com seu ativismo incansável e grande senso de moda, chama a atenção de Cam. Lady Camembert, apresentando-se na figura de Conde Camembert, não resiste em conhecer melhor a princesa. Conforme se aproximam, porém, aumenta a dificuldade em manter o segredo de Cam... Devore esta comédia romântica recheada de boas amizades, da busca pelos próprios sonhos e identidade, de amor verdadeiro e, sem dúvida, de muito queijo quente!
+                    <strong>Sinopse:</strong>
+                    Lady Camembert quer viver em seus próprios termos, sem se casar. Ou melhor, sem ter que se casar com
+                    um homem. Mas a lei de seu reino diz que a fortuna da família não pode ser herdada por mulheres
+                    solteiras. Então, quando o pai dela morre, ela adota a única alternativa que lhe resta: se disfarça
+                    de homem e muda para a capital do Reino de Fromage. Ela, então, inicia uma nova vida como Conde
+                    Camembert. Entretanto, é difícil manter a discrição quando a bela Princesa Brie, com seu ativismo
+                    incansável e grande senso de moda, chama a atenção de Cam. Lady Camembert, apresentando-se na figura
+                    de Conde Camembert, não resiste em conhecer melhor a princesa. Conforme se aproximam, porém, aumenta
+                    a dificuldade em manter o segredo de Cam... Devore esta comédia romântica recheada de boas amizades,
+                    da busca pelos próprios sonhos e identidade, de amor verdadeiro e, sem dúvida, de muito queijo
+                    quente!
                 </p>
             </div>
         </div>
@@ -100,7 +110,8 @@
                 <ul>
                     <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Home</a></li>
                     <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Livros</a></li>
-                    <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Sobre Nós</a></li>
+                    <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Sobre Nós</a>
+                    </li>
                 </ul>
             </div>
             <div class="footer-categories">
@@ -131,6 +142,17 @@
             <p>&copy; 2025 Scriptum - Todos os direitos reservados</p>
         </div>
     </footer>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
     <script src="../script.js"></script>
     <script>
@@ -175,10 +197,10 @@
 
 
         // Abrir pagina do livro
-        
+
         const readButton = document.querySelector('.buy-button');
         const favoriteButton = document.querySelector('.wishlist-button');
-        
+
         const openBook = () => {
             window.location.href = './A Princesa e o Queijo Quente.html'
         };

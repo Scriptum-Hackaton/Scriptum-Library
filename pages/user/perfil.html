@@ -67,27 +67,47 @@
                             onclick="removeFavorite('O Pedido da Fada Madrinha')">Remover</button>
                     </li>
                     <li>
-                        <img src="../../assets/livros/O Pedido da Fada Madrinha.jpg" alt="Capa do Livro">
-                        <p>O Pedido da Fada Madrinha</p>
-                        <button class="remove-favorite"
-                            onclick="removeFavorite('O Pedido da Fada Madrinha')">Remover</button>
+                        <img src="../../assets/livros/A Hora da Estrela.jpg" alt="A Hora da Estrela">
+                        <p>A Hora da Estrela</p>
+                        <button class="remove-favorite" onclick="removeFavorite('A Hora da Estrela')">Remover</button>
                     </li>
                     <li>
-                        <img src="../../assets/livros/O Pedido da Fada Madrinha.jpg" alt="Capa do Livro">
-                        <p>O Pedido da Fada Madrinha</p>
-                        <button class="remove-favorite"
-                            onclick="removeFavorite('O Pedido da Fada Madrinha')">Remover</button>
-                    </li>
-                    <li>
-                        <img src="../../assets/livros/O Pedido da Fada Madrinha.jpg" alt="Capa do Livro">
-                        <p>O Pedido da Fada Madrinha</p>
-                        <button class="remove-favorite"
-                            onclick="removeFavorite('O Pedido da Fada Madrinha')">Remover</button>
+                        <img src="../../assets/livros/Modus Operandi.jpg" alt="Modus Operandi">
+                        <p>Modus Operandi</p>
+                        <button class="remove-favorite" onclick="removeFavorite('Modus Operandi')">Remover</button>
                     </li>
                 </ul>
             </div>
+            <button class="publish-your-book">Publicar Livro</button>
+            <a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">
+                <button class="logout">Sair</button>
+            </a>
         </div>
     </main>
+
+    <!-- Modal para Publicar Livro -->
+    <div class="modal-publish-book">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Publicar Livro</h2>
+            <form id="publish-book-form">
+                <label for="full-name">Nome Completo:</label>
+                <input type="text" id="full-name" placeholder="Seu nome completo" required>
+
+                <label for="age">Idade:</label>
+                <input type="number" id="age" placeholder="Sua idade" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Seu email" required>
+
+                <label for="book-synopsis">Sinopse do Livro:</label>
+                <textarea id="book-synopsis" rows="4" placeholder="Escreva uma breve sinopse do livro"
+                    required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-content">
@@ -99,8 +119,9 @@
                 <h3>Links Rápidos</h3>
                 <ul>
                     <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Home</a></li>
-                    <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'"">Livros</a></li>
-                    <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'"">Sobre Nós</a></li>
+                    <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Livros</a></li>
+                    <li><a style="cursor: pointer;" onclick="window.location.href = '../../index.html'">Sobre Nós</a>
+                    </li>
                 </ul>
             </div>
             <div class="footer-categories">
@@ -135,13 +156,13 @@
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
+    </script>
 
     <script src="../script.js"></script>
     <script>
@@ -159,6 +180,39 @@
                 alert(`"${bookTitle}" foi removido dos favoritos.`);
             }
         }
+
+        // Modal para Publicar Livro
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.querySelector('.modal-publish-book');
+            const openModalBtn = document.querySelector('.publish-your-book');
+            const closeModalBtn = document.querySelector('.modal-content .close');
+            const form = document.getElementById('publish-book-form');
+
+            // Abrir o modal
+            openModalBtn.addEventListener('click', () => {
+                modal.style.display = 'flex';
+            });
+
+            // Fechar o modal
+            closeModalBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            // Fechar o modal ao clicar fora do conteúdo
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Submeter o formulário
+            form.addEventListener('submit', (event) => {
+                event.preventDefault(); // Impede o envio real do formulário
+                alert('Obrigado por enviar as informações! Entraremos em contato em breve.');
+                modal.style.display = 'none'; // Fecha o modal após o envio
+                form.reset(); // Limpa os campos do formulário
+            });
+        });
     </script>
 
 </body>
